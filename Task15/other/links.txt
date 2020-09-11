@@ -1,0 +1,8 @@
+Редакторы:
+https://vectr.com/
+https://editor.method.ac/
+https://jakearchibald.github.io/svgomg/
+
+Материалы:
+http://css.yoksel.ru/tags/#svg
+https://developer.mozilla.org/ru/docs/Web/SVG
