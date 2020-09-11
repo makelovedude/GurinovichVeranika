@@ -1,0 +1,4 @@
+1) https://github.com/yoksel/common-words
+2) https://habr.com/ru/company/ruvds/blog/347194/
+3) https://ru.bem.info/methodology/quick-start/
+4) https://ru.bem.info/methodology/naming-convention/

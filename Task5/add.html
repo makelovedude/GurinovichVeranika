@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta>
+    <title>background-size</title>
+</head>
+<body style="margin: 50px;">
+    <h1>&lt;background-size&gt;</h1>
+    <h2>&mdash;&nbsp;масштабирует фоновое изображение согласно заданным размерам.</h2>
+
+    <h3>Синтаксис:</h3>
+    <ul>
+        <li>auto;</li>
+        <li>contain;</li>
+        <li>cover;</li>
+        <li>числовые значения.</li>
+    </ul>
+
+    <h3>auto&mdash;</h3>
+    <p>если задано одновременно для ширины и высоты (auto auto), размеры фона остаются исходными; если только для одной стороны картинки (100px auto), то размер вычисляется автоматически исходя из пропорций картинки.</p>
+    <div style="background-image: url('image/unnamed.jpg'); width: 150px; height: 150px; background-repeat: no-repeat; background-size: auto; background-color:rgb(227,230,235);"></div>
+
+    <h3>contain&mdash;</h3>
+    <p>масштабирует картинку так, чтобы она максимально накрыла собой весь блок. Картинка при этом не обрезается, а вписывается в блок с сохранением пропорций</p>
+    <div style="background-image: url('image/unnamed.jpg'); width: 150px; height: 150px; background-repeat: no-repeat; background-size: contain; background-color:rgb(227,230,235);"></div>
+
+    <h3>cover&mdash;</h3>
+    <p>масштабирует изображение как можно больше c сохранением пропорций изображения (изображение не становится сплющенным). Когда изображение и контейнер имеют разные размеры, изображение обрезается либо влево / вправо, либо сверху / снизу.</p>
+    <div style="background-image: url('image/unnamed.jpg'); width: 150px; height: 150px; background-repeat: no-repeat; background-size: cover; background-color:rgb(227,230,235);"></div>
+
+    <h3>числовые значения&mdash;</h3>
+    <p>можно задать размер изображения в пикселях, сантиметрах, em, процентах и других единицах.</p>
+    <div>
+    <div style="background-image: url('image/unnamed.jpg'); width: 150px; height: 150px; background-repeat: no-repeat; background-size:150%; background-color:rgb(227,230,235);">процент</div>
+    <div style="background-image: url('image/unnamed.jpg'); width: 150px; height: 150px; background-repeat: no-repeat; background-size:150px; background-color:rgb(227,230,235);">пиксели</div>
+    <div style="background-image: url('image/unnamed.jpg'); width: 150px; height: 150px; background-repeat: no-repeat; background-size:5em; background-color:rgb(227,230,235);">em</div>
+
+</body>
+</html>

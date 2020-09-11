@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Много-уровневое горизонтальное меню</title>
+
+<style>
+
+    body {
+        background: grey;
+    }
+    h1 {
+        color: white;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+    nav {
+        background: #292929;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    nav ul {
+        margin: 30;
+        padding: 0;
+        list-style: none;
+    }
+     /* :after: добавляет сообщение после определенного элемента */
+    nav ul:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    nav a {
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+    /* выбирает ДОЧЕРНИЕ li в topmenu  */
+    .topmenu > li {
+        float: left;
+        position: relative;
+        padding: 0 30px 0;
+    }
+    /* выбирает ДОЧЕРНИЕ li в topmenu, а в них находит дочерние теги a  */
+    .topmenu > li > a {
+        padding: 15px 30px 10px;
+        font-size: 15px;
+    }
+    .submenu {
+    position: absolute;
+    z-index: 1;
+    min-width: 200px;
+    background: white;
+    border-left: 5px solid #4169E1;
+    transform-origin: 0% 0%; /* уст-ет точки, относительно которой будет происходить трансформация элемента(X и Y) */
+    transform: rotateX(-90deg); /* трансформирует элемент, в частности, позволяет его масштабировать, вращать, сдвигать, наклонять, а также комбинировать виды трансформаций(X и Y) */
+    transition: .3s linear; /* переход(пока слабо разобралась, но поняла, что можно через JS красиво) */
+    }
+   .submenu li {
+       position: relative;
+    }
+    .submenu li a {
+    color: grey;
+    padding: 10px 20px;
+    font-size: 13px;
+    }
+    .submenu .submenu {
+    position: absolute; 
+    left: 100%;
+    top: -1px;
+    transition: .3s linear;
+    }
+    li:hover > .submenu {
+    transform: rotateX(0deg);
+    }
+    /* ищем все строки с классом submenu в тех лишках, на которые мы наводим курсор мыши */
+    ul > li a:hover {
+        background: #4169E1;
+    }
+    ul >li > ul > li a:hover {
+        background: #C0C0C0;
+    }
+    .img-menu:before {
+    content: "";
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url("../Task10/image/sprite.png") -33px 0;
+    margin-right: 15px;
+    margin-top: -9px;
+    }
+    .img-about-us:before {
+    content: "";
+    float: left;
+    width: 30px;
+    height: 30px;
+    background: url("../Task10/image/sprite.png") -65px 0;
+    margin-right: 15px;
+    margin-top: -9px;
+    }
+    .img-photo:before {
+    content: "";
+    float: left;
+    width: 35px;
+    height: 30px;
+    background: url("../Task10/image/sprite.png") 3px -32px;
+    margin-right: 15px;
+    margin-top: -9px;
+    }
+    .img-blog:before {
+    content: "";
+    float: left;
+    width: 35px;
+    height: 30px;
+    background: url("../Task10/image/sprite.png") -32px -30px;
+    margin-right: 15px;
+    margin-top: -9px;
+    }
+    .img-contacts:before {
+    content: "";
+    float: left;
+    width: 35px;
+    height: 30px;
+    background: url("../Task10/image/sprite.png") 4px 0;
+    margin-right: 15px;
+    margin-top: -9px;
+    }
+
+
+</style>
+
+</head>
+
+<body>
+<h1>Много-уровневое горизонтальное меню</h1>
+<nav>
+    <ul class="topmenu">
+       <li><a href="https://www.tut.by/" class="img-menu">Главная</a>
+           <ul class="submenu">
+               <li><a href="https://www.tut.by/">Подменю 1</a></li>
+               <li><a href="https://www.tut.by/">Подменю 2</a></li>
+               <li><a href="https://www.tut.by/">Подменю 3</a></li>
+           </ul>
+       </li> 
+       <li><a href="https://www.tut.by/" class="img-about-us">О нас</a></li> 
+       <li><a href="https://www.tut.by/" class="img-photo">Портфолио</a>
+           <ul class="submenu">
+               <li><a href="https://www.tut.by/">Подменю 1</a></li>
+               <li><a href="https://www.tut.by/">Уровень 3 меню</a>
+                   <ul class="submenu">
+                       <li><a href="https://www.tut.by/">Подменю 4</a></li>
+                       <li><a href="https://www.tut.by/">Подменю 5</a></li>
+                       <li><a href="https://www.tut.by/">Подменю 6</a></li>
+                   </ul>
+               </li>
+           </ul>
+       </li> 
+       <li><a href="https://www.tut.by/" class="img-blog">Блог</a></li> 
+       <li><a href="https://www.tut.by/" class="img-contacts">Контакты</a></li> 
+    </ul>
+</nav>
+</body>
+
+</html>

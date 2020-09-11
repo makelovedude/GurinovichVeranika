@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета нового пользователя</title>
+<style>
+    body {
+        margin: 0;
+    }
+    fieldset {
+        width: 600px;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group:first-of-type {
+        margin-top: 1rem;
+    }
+    .button {
+        text-align: center;
+    }
+    .button__submit {
+        margin-right: 15px;
+    }
+    .button__reset {
+        margin: 15px;
+    }
+</style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Анкета нового пользователя</legend>
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input id="name" name="name" type="text">
+            </div>
+            <div class="form-group">
+                <label for="surname">Фамилия:</label>
+                <input id="surname" name="surname" type="text"> 
+            </div>
+            <div class="form-group">
+                <label for="gender">Укажите пол:</label>
+                <label for="gender">мужской</label>
+                <input id="gender" name="gender" type="radio" value="male">
+                <label for="gender">женский</label>
+                <input id="gender" name="gender" type="radio" value="women">
+            </div>
+            <div class="form-group">
+                <label for="country">Страна проживания:</label>
+                <select id="country" name="country">
+                    <option value="belarus">Беларусь</option>
+                    <option value="russia">Россия</option>
+                    <option value="poland">Польша</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Владение языками:</label>
+                <div>
+                <input id="language" name="language" type="checkbox" value="russian">
+                <label for="language">русский</label>
+                <input id="language" name="language" type="checkbox" value="belorussian">
+                <label for="language">белорусский</label>
+                <input id="language" name="language" type="checkbox" value="english">
+                <label for="language">английский</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="photo">Фото профиля:</label>
+                <input id="photo" type="file">
+            </div>
+            <div class="form-group">
+                <label for="login">Введите логин:</label>
+                <input id="login" name="login" type="text">
+            </div>
+            <div class="form-group">
+                <label for="email">Введите email:</label>
+                <input id="email" name="email" type="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Введите пароль:</label>
+                <input id="password" name="password" type="password">
+            </div>
+            <div class="form-group">
+                <label for="password">Повторите пароль:</label>
+                <input id="password" name="password" type="password">
+            </div>
+            <hr>
+            <div class="button">
+                <button class="button__submit" type="submit" disabled>Отправить</button>
+                <button class="button__reset" type="reset">Cancel</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>

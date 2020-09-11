@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь</title>
+<style>
+    body {
+        margin: 0;
+		background: darkgrey;
+	}
+
+	.form { 
+		font-family:Georgia, 'Times New Roman', Times, serif;
+		width: 600px;
+		background: white;
+		margin: 40px auto 0;
+		border: 5px solid #7099f8;
+		border-radius: 15px;
+	}
+    
+	.form__title { 
+		margin: 0;
+		padding: 20px 0 20px; 
+		text-align: center;
+		font-size: 35px;
+		font-weight: 400;
+		color: white;
+		background-color: #7099f8;
+	}   
+
+    .form__form-body {
+		margin: 30px;
+	}
+    
+	.form__label { 
+		padding-left: 5px;
+		font-weight: bold;
+		font-size: 16px;
+		color: grey;
+	}
+    
+	.form__input-indent {
+		padding-bottom: 25px;
+		font-size: small;
+	}
+    
+	.form__label-indent { 
+		padding-top: 5px;
+	}
+    
+	.form__input { 
+		width: 89%;
+		height: 40px;
+		border: darkgray 1px solid;
+		border-radius: 6px;
+		padding-left: 50px; 
+		font-size: 18px;
+	}
+    
+	.form__focused:focus {
+		border: 6px solid #7099f8; /* Исккала, как исправить черную рамку воккруг - так и не нашла :( */
+	}
+
+    .form__textarea { 
+		width: 90%;
+		max-width: 90%; 
+		min-width: 50%; 
+		height: 100px;
+		min-height: 100px; 
+		max-height: 150px;
+		border-radius: 6px;
+		padding: 20px 0 0 50px; 
+		font-size: 18px;
+		font-weight: 500;
+	}
+    
+	.form__button {
+		width: 240px;
+		height: 40px;
+		background: #7099f8;
+		border: none;
+		border-radius: 6px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		font-weight: bolder;
+	}
+    
+	.form__button-position {
+		width: 230px;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+
+
+    .form__icon-home {background: no-repeat url('../Task13/image/sprite.png') 115px -481px;}
+	.form__icon-name {background: no-repeat url('../Task13/image/sprite.png') 2px -3px;}
+	.form__icon-email {background: no-repeat url('../Task13/image/sprite.png') 2px -105px;}
+	.form__icon-phone {background: no-repeat url('../Task13/image/sprite.png') 2px -202px;}
+	.form__icon-textarea {background: no-repeat url('../Task13/image/sprite.png') -2px -310px;}
+
+
+    .form_vertical input { /*Класс модификатор*/
+		width: 60%;
+		float: right;
+		margin-right: 40px;
+		position: relative;
+		bottom: 30px; /* Устанавливает положение нижнего края содержимого элемента без учета толщины рамок и отступов. Отсчет координат зависит от свойства position, оно обычно принимает значение relative (относительное положение) или absolute (абсолютное положение) */
+	}
+
+	.form_vertical label { /*Класс модификатор*/
+		margin-right: 90px;
+		}
+    
+</style>
+</head>
+
+<body>
+
+<div class="form">   <!-- Класс модификатор добавляется сюда и меняется во 2-ой стиль -->
+    <h3 class="form__title">
+		<div class="form__icon-home">
+		<span>Обратная связь</span>
+	    </div>
+    </h3>
+
+    <form class="form__form-body">
+
+        <div class="form__input-indent">
+            <label for="name" class="form__label">Имя:</label> 
+            <div class="form__label-indent">
+                <input id="name" name="name" type="text" placeholder="Введите Ваше имя" class="form__input form__focused form__icon-name">
+            </div>
+        </div>
+        
+        <div  class="form__input-indent">
+            <label for="email" class="form__label">Email:</label>
+            <div class="form__label-indent">
+                <input id="email" name="email" type="email" placeholder="Введите адрес Вашей почты" class="form__input form__focused form__icon-email">
+            </div>
+        </div>
+        
+        <div class="form__input-indent">
+            <label for="phone" class="form__label">Телефон:</label>
+            <div class="form__label-indent">
+                <input id="phone" name="phone" type="tel" placeholder="Введите номер телефона" class="form__input form__focused form__icon-phone">
+            </div>
+        </div>
+        
+        <div class="form__input-indent">
+            <label for="textarea" class="form__label">Сообщение:</label>
+            <div class="form__label-indent">
+                <textarea id="textarea" name="textarea" placeholder="Текст сообщения" class="form__textarea form__focused form__icon-textarea"></textarea>
+            </div>
+        </div>
+        
+        <div class="form__button-position">
+            <button class="form__button" type="submit">Отправить</button>
+        </div>
+
+    </form>
+</div>
+</body>
+
+</html>

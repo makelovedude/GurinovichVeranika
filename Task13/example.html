@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Примеры форм</title>
+
+  <style>
+    body,
+    html {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0 20px 20px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      .form-group label {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> 
+    <header>
+      <h1>Примеры форм</h1>
+    </header>
+
+    <form>
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Имя формы</legend>
+
+        <div class="form-group row">
+          <label for="text" class="col-12 col-md-4 col-form-label">Текстовое поле</label>
+          <div class="col-12 col-md-8">
+            <input id="text" name="text" placeholder="плейсхолдер" type="text" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="password" class="col-12 col-md-4 col-form-label">Поле ввода пароля</label>
+          <div class="col-12 col-md-8">
+            <input id="password" name="password" placeholder="password" type="password" class="form-control" aria-describedby="passwordHelpBlock">
+            <span id="passwordHelpBlock" class="form-text text-muted">Здесь нужно ввести пароль не менее 8 символов</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="search" class="col-12 col-md-4 col-form-label">Поле поиска</label>
+          <div class="col-12 col-md-8">
+            <input id="search" name="search" placeholder="Что-то ищем?" type="search" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="textarea" class="col-12 col-md-4 col-form-label">Сообщение</label>
+          <div class="col-12 col-md-8">
+            <textarea placeholder="Введите Сообщение" id="textarea" name="textarea" cols="40" rows="3" class="form-control" style="resize: vertical; min-height: 60px; max-height: 200px;"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label">Радио кнопки</label>
+          <div class="col-12 col-md-8">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="value-1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                Опция 1
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="value-2">
+              <label class="form-check-label" for="exampleRadios2">
+                Опция 2
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="value-3">
+              <label class="form-check-label" for="exampleRadios3">
+                Опция 3
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-4">Еще радио кнопки</label>
+          <div class="col-12 col-md-8">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2-1" value="value-1" checked>
+              <label class="form-check-label" for="exampleRadios2-1">
+                1
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2-2" value="value-2">
+              <label class="form-check-label" for="exampleRadios2-2">
+                2
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2-3" value="value-3">
+              <label class="form-check-label" for="exampleRadios2-3">
+                3
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2-4" value="value-4" disabled>
+              <label class="form-check-label" for="exampleRadios2-4">
+                4
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label">Чекбоксы</label>
+          <div class="col-12 col-md-8">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes" id="exampleCheckboxes1" value="value-1" checked>
+              <label class="form-check-label" for="exampleCheckboxes1">
+                Опция 1
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes" id="exampleCheckboxes2" value="value-2">
+              <label class="form-check-label" for="exampleCheckboxes2">
+                Опция 2
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes" id="exampleCheckboxes3" value="value-3">
+              <label class="form-check-label" for="exampleCheckboxes3">
+                Опция 3
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label">Чекбоксы в строку</label>
+          <div class="col-12 col-md-8">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes2" id="exampleCheckboxes2-1" value="value-1" checked>
+              <label class="form-check-label" for="exampleCheckboxes2-1">
+                Опция 1
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes2" id="exampleCheckboxes2-2" value="value-2">
+              <label class="form-check-label" for="exampleCheckboxes2-2">
+                Опция 2
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes2" id="exampleCheckboxes2-3" value="value-3">
+              <label class="form-check-label" for="exampleCheckboxes2-3">
+                Опция 3
+              </label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" name="exampleCheckboxes2" id="exampleCheckboxes2-4" value="value-4" checked>
+              <label class="form-check-label" for="exampleCheckboxes2-4">
+                Опция 4
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="select" class="col-12 col-md-4 col-form-label">Выпадающий список</label>
+          <div class="col-12 col-md-8">
+            <select id="select" name="select" class="custom-select">
+              <option value="value1">Опция раз</option>
+              <option value="value2">Опция два</option>
+              <option value="value3">Опция три</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="select1" class="col-12 col-md-4 col-form-label">Select</label>
+          <div class="col-12 col-md-8">
+            <select id="select1" name="select1" class="custom-select" multiple="multiple">
+              <option value="rabbit">Опция 1</option>
+              <option value="duck">Опция 2</option>
+              <option value="fish">Опция 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="exampleFormControlFile1" class="col-12 col-md-4 col-form-label">Пример загрузки файла</label>
+          <div class="col-12 col-md-8">
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="buttonOneId">Одна кнопка</label>
+          <div class="col-12 col-md-8">
+            <input type="submit" class="btn btn-primary" value="Готово">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label">Две кнопки</label>
+          <div class="col-12 col-md-8">
+            <button id="button1id" name="button1id" class="btn btn-success">Отправить</button>
+            <button id="button2id" name="button2id" class="btn btn-danger">Отменить</button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>HTML5 inputs</legend>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="date">Поле для ввода даты и времени  </label>
+          <div class="col-12 col-md-4">
+            <input id="date" name="date" type="date" class="form-control" />
+          </div>
+          <div class="col-12 col-md-4">
+            <input id="time" name="time" type="time" class="form-control" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <datalist id="animalslist">
+            <option value="собачка">
+            <option value="кошка">
+            <option value="тигра">
+            <option value="лёва">
+            <option value="слоник">
+            <option value="жирафик">
+            <option value="бегемотик">
+          </datalist>
+          <label class="col-12 col-md-4 col-form-label" for="list">Введите вид животного: </label>
+          <div class="col-12 col-md-8">
+            <input type="text" id="list" class="form-control" list="animalslist">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="url">Поле для ввода ссылки</label>
+          <div class="col-12 col-md-8">
+            <input id="url" name="url" type="url" class="form-control" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="tel1">Поле для ввода телефона</label>
+          <div class="col-12 col-md-8">
+            <input id="tel1" name="tel1" type="tel" pattern="8[0-9]{10}" class="form-control" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="number">Поле для ввода числа</label>
+          <div class="col-12 col-md-8">
+            <input id="number" name="number" type="number" value="10" step="4" class="form-control"/>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="range">Ползунок</label>
+          <div class="col-12 col-md-8">
+            <input id="range" name="range" type="range" min="1" max="5" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label">Поле прогресса</label>
+          <div class="col-12 col-md-8">
+            <progress max="8" value="5" style="width: 300px;">
+                прошло 5 часов из 8
+            </progress>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="offset-4 col-12 col-md-8">
+            <details>
+                <summary>Спойлер! Предупреждаю!!!</summary>
+                <p>Убийца — <strong>дворецкий</strong>!</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-12 col-md-4 col-form-label" for="color">Выбор цвета</label>
+          <div class="col-12 col-md-8">
+            <input id="color" name="color" type="color" />
+          </div>
+        </div>
+    </fieldset>
+    </form>
+
+  </div>
+</body>
+</html>
+
+
+

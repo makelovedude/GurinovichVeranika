@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица-2</title>
+
+<style>
+
+    .table-main {
+        border-collapse: collapse; border-spacing: 0; 
+        width: 100%; border: solid 2px #0000ff;
+        }
+    th {
+        border-bottom: solid 2px #0000ff;
+        background-color: #888888; color: #ffffff; padding: 5px;
+        }
+    .table-main td {
+        border: solid 2px #0000ff; padding: 5px;
+        }
+    .right {
+        text-align: right;
+        }
+    .center {
+        text-align: center;
+        }
+
+
+
+
+    .table-image-1 {
+        border-collapse: collapse; border-spacing: 0; 
+        margin: 15px auto;
+        }
+    .table-image-1 td {
+        height: 30px; width: 30px;
+        }
+    .fill1 {
+        background-color: red;
+        }
+    .fill2 {
+        background-color: lime;
+        }
+
+
+    .table-image-2 {
+        border-collapse: collapse; border-spacing: 0; 
+        margin: 15px auto;
+        }
+    .table-image-2 td {
+        height: 25px; width: 25px;
+        }
+    .filling1 {
+        background-color: #ff1493;
+        }
+    .filling2 {
+        background-color: #ee82ee;
+        }
+    .filling3 {
+        background-color: #ff69b4;
+        }
+    .filling4 {
+        background-color: #ffb6c1;
+        }
+    .filling5 {
+        background-color: #008000;
+        }
+    .filling6 {
+        background-color: #2E8B57;
+        }
+    .filling7 {
+        background-color:#32CD32;
+        }
+    .filling8 {
+        background-color: #00FF00;
+        }
+
+
+
+
+    .table-image-3 {
+        border-collapse: collapse; border-spacing: 0; 
+        margin: 15px auto; 
+        background-color: black;
+        }
+    .table-image-3 td {
+        height: 35px; width: 35px;
+        }
+    .lights1 {
+        background-color: #008000;
+        }
+    .lights2 {
+        background-color: #2E8B57;
+        }
+    .lights3 {
+        background-color: #3CB371;
+        }
+    .lights4 {
+        background-color: #32CD32;
+        }
+    .lights5 {
+        background-color: #8B4513;
+        }
+    .lights6 {
+        background-color: #CD853F;
+        }
+
+</style>
+
+</head>
+
+<body>
+<h1>Пример сложной таблицы</h1>
+
+<table class="table-main">
+
+    <tr>
+        <th>Название1</th>
+        <th>Название2</th>
+        <th>Еще название</th>
+        <th>Куча элементов</th>
+        <th>Список1</th>
+        <th>Список2</th>
+    </tr>
+    <tr>
+        <td rowspan="11" class="center">JPMC</td>
+        <td rowspan="5">CST</td>
+        <td rowspan="3">CT</td>
+        <td>ADS</td>
+        <td class="center">1</td>
+        <td class="center">10</td>
+    </tr>
+    <tr>
+        <td>BTO</td>
+        <td class="center">2</td>
+        <td class="center">15</td>
+    </tr>
+    <tr>
+        <td>CSI</td>
+        <td class="center">3</td>
+        <td class="center">16</td>
+    </tr>
+    <tr>
+        <td rowspan="2" class="center">VCT</td>
+        <td>ADS</td>
+        <td class="center">4</td>
+        <td class="center">10</td>
+    </tr>
+    <tr>
+        <td>BTO</td>
+        <td class="center">5</td>
+        <td class="center">15</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="right">Sub Total</td>
+        <td class="center">6</td>
+        <td class="center">15</td>
+    </tr>
+    <tr>
+        <td rowspan="4">CST</td>
+        <td rowspan="3">CT</td>
+        <td>ADS</td>
+        <td class="center">7</td>
+        <td class="center">10</td>
+    </tr>
+    <tr>
+        <td>BTO</td>
+        <td class="center">8</td>
+        <td class="center">15</td>
+    </tr>
+    <tr>
+        <td>CSI</td>
+        <td class="center">9</td>
+        <td class="center">16</td>
+    </tr>
+    <tr>
+        <td class="center">VCT</td>
+        <td>ADS</td>
+        <td class="center">10</td>
+        <td class="center">10</td>
+    </tr>
+    <tr>
+        <td colspan="3" class="right">Sub Total</td>
+        <td class="center">11</td>
+        <td class="center">15</td>
+    </tr>
+    
+</table>
+
+
+
+<table class="table-image-1">
+    <tr>
+        <td class="fill1"></td>
+        <td></td>
+        <td class="fill1"></td>
+        <td class="fill2"></td>
+        <td class="fill1"></td>
+        <td></td>
+        <td class="fill1"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="fill1"></td>
+        <td class="fill2"></td>
+        <td></td>
+        <td class="fill2"></td>
+        <td class="fill1"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="fill1"></td>
+        <td class="fill2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="fill2"></td>
+        <td class="fill1"></td>
+    </tr>
+    <tr>
+        <td class="fill2"></td>
+        <td></td>
+        <td></td>
+        <td class="fill1"></td>
+        <td></td>
+        <td></td>
+        <td class="fill2"></td>
+    </tr>
+    <tr>
+        <td class="fill1"></td>
+        <td class="fill2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="fill2"></td>
+        <td class="fill1"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="fill1"></td>
+        <td class="fill2"></td>
+        <td></td>
+        <td class="fill2"></td>
+        <td class="fill1"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="fill1"></td>
+        <td></td>
+        <td class="fill1"></td>
+        <td class="fill2"></td>
+        <td class="fill1"></td>
+        <td></td>
+        <td class="fill1"></td>
+    </tr>
+</table>
+
+
+
+
+
+<table class="table-image-2">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td class="filling6"></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling3"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td class="filling6"></td>
+        <td class="filling7"></td>
+        <td class="filling6"></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling3"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+    </tr>
+    <tr>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling3"></td>
+        <td class="filling4"></td>
+        <td class="filling3"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td class="filling6"></td>
+        <td class="filling7"></td>
+        <td class="filling8"></td>
+        <td class="filling7"></td>
+        <td class="filling6"></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling3"></td>
+        <td class="filling4"></td>
+        <td class="filling3"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling3"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td class="filling6"></td>
+        <td class="filling7"></td>
+        <td class="filling6"></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling3"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td class="filling6"></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td class="filling2"></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="filling1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+
+
+<table class="table-image-3">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="lights1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="lights2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="5" class="lights3"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="7" class="lights4"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="3" class="lights1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="5" class="lights2"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="7" class="lights3"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="9" class="lights4"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan="5" class="lights1"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="7" class="lights2"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="9" class="lights3"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="11" class="lights4"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="4" class="lights5"></td>
+        <td rowspan="4" class="lights6"></td>
+        <td rowspan="4" class="lights5"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

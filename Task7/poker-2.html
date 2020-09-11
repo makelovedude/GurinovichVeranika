@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Poker-2</title>
+    
+    <style>
+
+        body {
+            background-color: rgb(43, 208, 214);
+            }
+
+        .frame-left {
+            background: url('../Task6/image/leftright.png')
+            repeat-y; 
+            background-color: white;
+            }
+        .frame-right {
+            background: url('../Task6/image/leftright.png')
+            right repeat-y;
+            }
+        .frame-top {
+            background: url('../Task6/image/topbottom.png')
+            top repeat-x;
+            }
+        .frame-bottom {
+            background: url('../Task6/image/topbottom.png')
+            bottom repeat-x;
+            }
+        
+
+        .frame-topleft {
+            background: url('../Task6/image/topleft.png')
+            top left no-repeat;
+            }
+        .frame-bottomleft {
+            background: url('../Task6/image/bottomleft.png')
+            bottom left no-repeat;
+            }
+        .frame-topright {
+            background: url('../Task6/image/topright.png')
+            top right no-repeat;
+            }
+        .frame-bottomright {
+            background: url('../Task6/image/bottomright.png')
+            bottom right no-repeat;
+            }
+
+        .text {
+            padding: 60px 75px; 
+            font-size: small;
+            }
+
+        .border {
+            border-collapse: collapse; border-spacing: 0; 
+            border: solid green; 
+            padding:20px;
+            }
+        .image_cards {
+            height: 190px; width: 140px;
+            display: inline-block;
+            background-image: url('../Task6/image/cards.png');
+            }
+        /* Возможно, можно было сделать таким образом:
+        .border_for_cards {border-collapse: collapse; border-spacing: 0; border: solid green; padding:20px;}
+        .border_for_cards div {height: 190px; width: 140px; display: inline-block; background-image: url('../Task6/image/cards.png');}
+        Подскажите, пожалуйста, какой вариант является верным, а главное - верный ли хоть какой-то? :))
+         */
+
+
+        .card-ace-spades {
+            background-position: -1px 382px;
+            }
+        .card-king-clubs {
+            background-position: -144px 577px;
+            }
+        .card-queen-diamonds {
+            background-position: -288px 773px;
+            }
+        .card-jack-hearts {
+            background-position: -2154px 967px;
+            }
+        .card-ten-clubs {
+            background-position: -2440px 1161px;
+            }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="frame-left">
+        <div class="frame-right">
+            <div class="frame-top">
+                <div class="frame-bottom">
+                    <div class="frame-topleft">
+                        <div class="frame-topright">
+                            <div class="frame-bottomleft">
+                                <div class="frame-bottomright">
+                                    <div class="text">
+
+
+
+                                    <h1>Покер</h1>
+                                    <p><strong>По́кер</strong> (англ. poker) &mdash; карточная игра, цель которой &mdash; выиграть ставки, собрав как можно более высокую покерную комбинацию, используя 4 (старый классический вариант), или 5 карт, или вынудив всех соперников прекратить участвовать в игре. Игра идёт с полностью или частично закрытыми картами. Конкретные правила могут варьироваться в зависимости от разновидности покера. Обобщающими элементами всех разновидностей покера являются комбинации и наличие торговли в процессе игры.</p>
+                                    <p>Ввиду того, что игрок не знает карты своих противников, покер является игрой с неполной информацией, как и многие другие карточные игры, в отличие от, например, шахмат, в которых оба игрока видят положение всех фигур на доске.</p>
+                                    <h2>Комбинация в покере &mdash; стрит</h2>
+                                    
+                                    <div class="border">
+
+                                    <div class="card-ace-spades image_cards"></div>
+                                    <div class="card-king-clubs image_cards"></div>
+                                    <div class="card-queen-diamonds image_cards"></div>
+                                    <div class="card-jack-hearts image_cards"></div>
+                                    <div class="card-ten-clubs image_cards"></div>
+                                    
+                                    </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

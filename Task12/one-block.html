@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Адаптивный блок</title>
+	<style>
+	body {
+		margin: 0 auto;
+		background-color: aqua;
+	}
+	.block {
+		width: 400px;
+		height: 400px;
+		margin: 50px auto;
+		background-color: yellow;
+	}
+	@media (max-width: 1280px) {
+		.block {
+			background-color: red;
+		}
+	}
+	@media (max-width: 1024px) {
+		.block {
+			border-radius: 10%;
+		}
+	}
+	@media (max-width: 768px) {
+		.block {
+			background-color: yellow;
+		}
+	}
+	@media (max-width: 640px) {
+		.block {
+			border: 2px solid red;
+		}
+	}
+	@media (max-width: 480px) {
+		.block {
+			border-radius: 100%;
+            width: 100vw;
+			max-width: 400px; 
+			height: 100vh;
+			max-height: 400px;
+			box-sizing: border-box;
+		}
+	}
+	@media (max-width: 320px) {
+		.block {
+			margin: 0;
+			border-radius: 0;
+			border: 0;
+		}
+	}
+	</style>
+	<title>Адаптивный блок</title>
+</head>
+<body>
+	<div class="block"></div>
+</body>
+</html>

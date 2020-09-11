@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chess</title>
+
+    <style>
+
+        body {
+            background-color: cyan;
+        }
+        h1 {
+            text-align: center;
+        }
+        .table-chess {
+            border-collapse: collapse; border-spacing: 0; border: solid 3px; margin: 15px auto;
+            background-color: white;
+        }
+        .table-chess th {
+            height: 24px; width: 24px;
+        }
+        .table-chess td {
+             height: 48px; width: 48px;
+        }
+        .table-chess tr:nth-child(even) td:nth-child(odd){
+            background-color: rgba(0,0,0,0.5);
+        }
+        .table-chess tr:nth-child(odd) td:nth-child(even){
+            background-color: rgba(0,0,0,0.5);
+        }
+        th:last-of-type {
+            border-left: solid 3px;
+        }
+        th:first-of-type {
+            border-right: solid 3px;
+        }
+        
+        tr:nth-child(1) th{
+            border-right: white;
+            border-left: white;
+        }
+        tr:nth-of-type(2) td{
+            border-top: solid 3px;
+        }
+        tr:nth-child(10) th{
+            border-right: white;
+            border-left: white;
+        }
+        tr:nth-child(9) td{
+            border-bottom: solid 3px;
+        }
+
+        .image-chess-figure {
+            background-image: url(../Task7/image/chess.png);   
+        }
+        
+        .black-castle {
+            background-position: 192px 192px;
+        }
+        .black-knight {
+            background-position: 388px 192px;
+        }
+        .black-bishop {
+            background-position: 436px 194px;
+        }
+        .black-king {
+            background-position: 0px 194px;
+        }
+        .black-queen {
+            background-position: 242px 194px;
+        }
+
+        .white-castle {
+            background-position: 192px 146px;
+        }
+        .white-knight {
+            background-position: 388px 146px;
+        }
+        .white-bishop {
+            background-position: 436px 146px;
+        }
+        .white-king {
+            background-position: 0px 146px;
+        }
+        .white-queen {
+            background-position: 242px 146px;
+        }
+        .black-pawn {
+            background-position: 50px 194px;
+        }
+        .white-pawn {
+            background-position: 48px 146px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Шахматы</h1>
+
+    <table class="table-chess">
+
+        <tr>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+            <th></th>
+        </tr>
+        <tr>
+            <th>8</th>
+            <td class="black-castle image-chess-figure"></td>
+            <td class="black-knight image-chess-figure"></td>
+            <td class="black-bishop image-chess-figure"></td>
+            <td class="black-queen image-chess-figure"></td>
+            <td class="black-king image-chess-figure"></td>
+            <td class="black-bishop image-chess-figure"></td>
+            <td class="black-knight image-chess-figure"></td>
+            <td class="black-castle image-chess-figure"></td>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <td class="black-pawn image-chess-figure"></td>
+            <th>7</th>
+        </tr>
+        <tr>
+            <th>6</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>6</th>
+        </tr>
+        <tr>
+            <th>5</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>5</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>4</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>3</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <td class="white-pawn image-chess-figure"></td>
+            <th>2</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td class="white-castle image-chess-figure"></td>
+            <td class="white-knight image-chess-figure"></td>
+            <td class="white-bishop image-chess-figure"></td>
+            <td class="white-queen image-chess-figure"></td>
+            <td class="white-king image-chess-figure"></td>
+            <td class="white-bishop image-chess-figure"></td>
+            <td class="white-knight image-chess-figure"></td>
+            <td class="white-castle image-chess-figure"></td>
+            <th>1</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>a</th>
+            <th>b</th>
+            <th>c</th>
+            <th>d</th>
+            <th>e</th>
+            <th>f</th>
+            <th>g</th>
+            <th>h</th>
+            <th></th>
+        </tr>
+        
+        
+    </table>
+
+</body>
+</html>
