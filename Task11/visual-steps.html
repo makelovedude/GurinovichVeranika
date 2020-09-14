@@ -5,68 +5,70 @@
     <title>Визуальные шаги</title>
 </head>
 <style>
+
     body {
         margin: 0;
     }
-    .container {
-        width: 1300px;
-    }
-    .visual-step {
-        counter-reset: step;
-    }
-    .visual-step li {
-        list-style-type: none;
-        width: 6%;
-        float: left;
-        font-size: 15px;
-        position: relative;
-        color: white;
-    }
-    .visual-step li:before {
-        width: 40px;
-        height: 40px;
-        content: counter(step);
-        counter-increment: step;
-        line-height: 40px;
-        border: 3px solid rgb(192, 183, 183);
-        border-radius: 50%;
-        display: block;
-        text-align: center;
-        margin: 0 auto 10px;
-        background-color: #9ACD32;
-    }
-    .visual-step li:after {
-        width: 100%;
-        height: 5px;
-        content: '';
-        position: absolute;
-        background-color: darkgrey;
-        top: 20px;
-        left: -50%;
-        z-index: -1;
-    }
-    .visual-step li:first-child:after {
-        content: none;
-    }
-    .visual-step li.active:before {
-        background: rgb(117, 36, 117);
-    }
-    .visual-step li.blank:before {
-        background: rgb(192, 183, 183);
-        color: black;
+
+    .menu{
+       text-align: center;
+       margin-top: 150px;
+       padding: 0;
     }
 
+    .menu__item{
+       display: inline-block;
+    }
+
+    .menu__link {
+       color: white;
+       float: left;
+       padding: 10px 16px;
+       text-decoration: none;
+       background-color: darkgray;
+       margin-right: 25px;
+       border-radius: 50%;
+       border:3px solid darkgrey;
+       position:relative;
+    }
+
+    .menu__link_complete{
+       background-color: rgba(139, 216, 67);
+    }
+
+    .menu__link_active{
+       background-color: rgb(185, 64, 185);
+    }
+     
+    .menu__link_next{
+       background-color: darkgray;
+       color:black;
+    }
+
+    .menu__link::after{
+        content:"";
+        width: 60px;
+        height: 3px;
+        margin: auto;
+        position: absolute;
+        top: 20px; 
+        left: 20px; 
+        background-color: darkgrey;
+        z-index: -1;
+    } 
+
+    li.menu__item:last-child .menu__link::after {
+        content: none;
+    }
     
 </style>
 <body>
-    <div class="container">
-        <ul class="visual-step">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li class="active"></li>
-            <li class="blank"></li>
-    </ul>
-    </div>
+    <ul class="menu">
+        <li class="menu__item"><a class="menu__link menu__link_complete"href="#">1</a></li>
+        <li class="menu__item"><a class="menu__link menu__link_complete" href="#">2</a></li>
+        <li class="menu__item"><a class="menu__link menu__link_complete" href="#">3</a></li>
+        <li class="menu__item"><a class="menu__link menu__link_active"href="#">4</a></li> 
+        <li class="menu__item"><a class="menu__link menu__link_next" href="#">5</a></li> 
+    </ul>   
 </body>
 </html>
