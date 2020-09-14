@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимационные кнопки</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+            margin: 50px;
+        }
+
+        .button-one input {
+            padding: 15px 25px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            border: 1px solid orange;
+            background-color: rgba(238, 238, 238, 0);
+            font-size: 20px;
+        }
+        .button-one input:hover {
+            background: rgb(34,193,195);
+            background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,214,45,1) 100%);
+        }
+        .button-one input::-webkit-input-placeholder {
+            color: orange;
+            text-align: center;
+            text-shadow: rgb(63, 61, 57) 3px 3px 2px;
+        }
+
+
+        .button-two input {
+            outline: none;
+            border-radius: 10px;
+            border-right: 4mm ridge rgba(94, 197, 34, 0.6);
+            border-bottom: 4mm ridge rgba(94, 197, 34, 0.6);
+            border-left: 4mm ridge rgba(94, 197, 34, 0.6);
+            border-top: 4mm ridge rgba(94, 197, 34, 0.6);
+            background-color: rgba(238, 238, 238, 0);
+            font-size: 20px;
+        }
+        .button-two input:hover {
+            background-color: green;
+        }
+        .button-two input::-webkit-input-placeholder {
+            color: black;
+            text-align: center;
+        }
+
+
+
+        .button-three a {
+           color: black;
+           border: 1px solid black;
+           background-color: rgba(238, 238, 238, 0);
+           font-weight: 700;
+           text-decoration: none;
+           padding: .5em 2em;
+           outline: none;
+           border-radius: 30px;
+           transition: 0.2s;
+        }
+        .button-three a:hover {
+            background-color: black;
+            color: white;
+        }
+        .button-three a:active {
+            background-color: rgba(238, 238, 238, 0);
+            border: 1px solid black;
+        }
+
+
+        .button-four button {
+            background: rgb(192,174,238);
+            background: radial-gradient(circle, rgba(192,174,238,1) 0%, rgba(163,228,198,1) 83%, rgba(148,216,233,1) 100%);
+            border: none;
+            border-radius: 10%/50%;
+            outline: none;
+            font-size: 30px;
+            padding: 20px 50px;
+            text-shadow: rgb(12, 12, 12) 5px 5px 2px; /* смещение, смещение, радиус размытия */
+        }
+        .button-four a {
+            text-decoration: none;
+            color: rgba(241, 247, 241, 0.938);
+        }
+        .button-four button:hover {
+            background: rgb(107,77,182);
+            background: radial-gradient(circle, rgba(107,77,182,1) 0%, rgba(163,228,198,1) 83%, rgba(148,216,233,1) 100%);
+        }
+        .button-four button:active {
+            background: rgb(44,9,133);
+            background: radial-gradient(circle, rgba(44,9,133,1) 0%, rgba(163,228,198,1) 83%, rgba(148,216,233,1) 100%);
+        }
+
+
+
+
+        .button-five a {
+            font-weight: bolder;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 5px 150px;
+            background: rgb(120, 172, 240);
+            box-shadow: 0px -7px rgb(88, 98, 226) inset; /* inset - чтобы тень была внутри элемента */
+            transition: 0.9s 0.1s; /* длительность и задержка */
+        }
+        .button-five a:hover {
+            background: rgb(31, 187, 192);
+        }
+        .button-five a:active {
+            background: rgb(31, 187, 192);
+            box-shadow: 0 3px rgb(147, 33, 118) inset;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="button-one">
+        <input id="name" name="name" type="text" placeholder="Имя">
+    </div>
+
+    <div class="button-two">
+        <input id="surname" name="surname" type="text" placeholder="Фамилия"> 
+    </div>
+
+    <div class="button-three">
+        <span><a href="#">Получить консультацию</a></span>
+    </div>
+
+    <div class="button-four">
+        <button type="submit"><a href="#">Получить каталог</a></button>
+    </div>
+
+    <div class="button-five">
+        <span><a href="#">Жмяк</a></span>
+    </div>
+    
+</body>
+</html>
