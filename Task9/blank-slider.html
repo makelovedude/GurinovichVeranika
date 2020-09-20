@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+        body {
+           font-size: 32px;
+           margin: 0;
+           background-color: whitesmoke;
+           font-family: 'Open Sans', sans-serif;
+        }
+
+        p:first-of-type {
+           text-align: center;
+        }
+
+        .slider-background {
+           border-bottom: 3px solid blue; 
+           border-top: 3px solid blue; 
+           background-color: black; 
+        }
+
+        .slider {
+           margin: auto; 
+           position: relative; 
+           width: 1200px; 
+           height: 425px;
+        }
+
+        img {
+           margin: auto;
+        }
+
+        .left {
+           background-image: url("image/prev-next-sprite.png"); 
+           background-repeat: no-repeat;
+           width: 70px; 
+           height: 425px;
+           background-position: 40px center;
+           position: absolute;
+           left: 0px;
+           top: 0px;
+           margin: auto;
+        }
+
+        .right {
+           background-image: url("image/prev-next-sprite.png"); 
+           background-repeat: no-repeat;
+           width: 70px; 
+           height: 390px;
+           background-position: -30px center;
+           position: absolute;
+           right: 0px;
+           top: 20px;
+           margin: auto;
+        }
+      
+        .block-text {
+           margin: auto; 
+           width: 550px;  
+           position: absolute;  
+           right: 28%; 
+           top: 100px; 
+           color: white;
+        }
+
+        .block-text__text {
+           position: absolute;  
+           right: 18%; 
+           top: 85px; 
+        }
+
+        h2 {
+           border-bottom: 3px solid white; 
+           border-top: 3px solid white;
+        }
+      
+        .number-of-slides {
+           margin: auto; 
+           position: absolute; 
+           right: 45%; 
+           top: 470px;
+        }
+
+        ul {
+           margin: auto;   
+        } 
+
+        ul li {
+           display: inline;
+        }
+
+        li a {
+           text-decoration: none;
+           font-size: 15px;
+           background: white;
+           margin-right: 15px;
+           padding: 0 10px;
+        }
+
+        li a:hover {
+           background-color: orange;
+        }
+
+    </style>
+
+  </head>
+  <body>
+
+  <div>
+      <p>
+          Верстка заготовки для слайдера
+      </p>
+      <div class="slider-background">
+      <div class="slider">
+        <img src="image/slider-img-01.jpg" alt="тут был слайдер">
+        <div class="block-text">
+            <h2>
+                КОМФОРТНАЯ ОДЕЖДА
+            </h2>
+            <p class="block-text__text">
+                для всех видов спорта
+            </p>
+        </div>
+            <div>
+            
+                <a href="#" class="left"></a>
+                <a href="#" class="right"></a>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="number-of-slides">
+            <ul>
+                <li>
+                    <a href="#"></a>
+                 </li>
+                <li>
+                    <a href="#"></a>
+                 </li>
+                <li>
+                    <a href="#"></a>
+                 </li>
+                <li>
+                    <a href="#"></a>
+                 </li>
+            </ul>
+        </div>
+      </div>
+ 
+  </body>
+</html>
