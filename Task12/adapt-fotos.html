@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Адаптивная галерея</title>
+    <style>
+
+    .gallery {
+        max-width: 1200px; 
+        min-width: 320px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 393.33px;
+        padding: 0px 0px 10px 10px;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    p {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    @media (min-width: 1200px){
+        img {
+          max-width: 32%;
+          height: auto;
+        }
+    }
+
+    @media (max-width: 1200px){
+        img {
+          max-width: 32%;
+          height: auto;
+        }
+    }
+
+      @media (max-width: 980px){
+        img {
+          max-width: 32%;
+          height: auto;
+        }
+    }
+
+     @media (max-width: 768px){
+        img {
+          max-width: 49%;
+          height: auto;
+        }
+    } 
+
+    @media (max-width: 480px){
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+    }
+
+    </style>
+  </head>
+  <body>
+    <p>Адаптивная верстка галереи</p>
+     <div class="gallery">
+      <img src="image/dog/1.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/2.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/3.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/4.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/5.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/6.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/7.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/8.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+      <img src="image/dog/9.jpg" alt="тут была какая-то порода собаки" title="какая-то порода собаки">
+    </div>
+  </body>
+</html>
