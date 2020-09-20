@@ -1,0 +1,13 @@
+Flexbox Layout:
+https://tproger.ru/translations/how-css-flexbox-works/
+https://tproger.ru/translations/flex-properties-on-css/
+http://css-live.ru/articles/vizualnoe-rukovodstvo-po-svojstvam-flexbox-iz-css3.html
+http://www.internet-technologies.ru/articles/polnoe-rukovodstvo-po-flexbox.html
+https://habr.com/ru/post/467049/
+http://shpargalkablog.ru/2016/06/flex-margin.html
+
+http://bennettfeely.com/flexplorer/
+http://www.csstutorial.org/flex-both.html
+https://codepen.io/enxaneta/full/adLPwv
+http://flexboxfroggy.com/#ru
+http://www.flexboxdefense.com/

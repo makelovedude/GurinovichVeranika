@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивный flex</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            display: flex;
+        }
+
+        .logo {
+            background-color: darkgrey;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 0px 30px;
+        }
+
+        .menu {
+            background-color: rgb(68, 136, 192);
+            color: white;
+            flex-basis: 100%;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        li {
+            margin-right: 20px;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+        }
+
+        .aside-one {
+            flex-basis: 25%;
+            text-align: center;
+            background-color: yellow;
+            order: -1;
+        }
+
+        .aside-two {
+            flex-basis: 25%;
+            text-align: center;
+            background-color: pink;
+        }
+
+        .text {
+            flex-basis: 60%;
+            padding: 20px;
+            background-color: rgb(84, 162, 182);
+        }
+
+        .footer {
+            display: flex;
+            background-color: rgb(96, 153, 96);
+        }
+
+        .footer div{
+            display: flex;
+            flex-basis: 35%;
+            align-items: center;
+            padding: 15px;
+        }
+
+        .footer ul{
+            display: flex;
+            justify-content: flex-end;
+            flex-basis: 65%;
+            list-style-type: none;
+            color: white;
+        }
+
+        .footer ul li{
+           padding: 0 15px;  
+        }
+
+        @media (max-width: 760px) {
+            .header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .header p {
+                background-color: darkgrey;
+                height: 30px;
+                width: 100px;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .logo {
+                background-color: rgb(68, 136, 192);
+                width: 100%;
+            }
+
+            ul, .footer div {
+                justify-content: center;
+            }
+            
+            ul {
+                justify-content: space-around;
+            }
+
+            .footer ul {
+                justify-content: center;
+            }
+
+            .content {
+                flex-wrap:wrap;
+            }
+
+            .text {
+                order: -1;
+                flex-basis: 100%;
+            }
+
+            .aside-one {
+                flex-basis: 50%;
+            }
+
+            .aside-two {
+                flex-basis: 50%;
+            }
+
+            .footer {
+                flex-wrap: wrap;
+            }
+
+            .footer div, .footer ul {
+                flex-basis: 100%;
+            }
+        }
+
+        @media (max-width: 375px)   {
+            ul {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding-left: 0px;
+                margin: 0;
+            }
+
+            .aside-one {
+                flex-basis: 100%;
+            }
+
+            .aside-two {
+                flex-basis: 100%;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                margin-right: 0px;
+            }
+            
+            .footer li{
+                border:solid 1px rgba(169, 169, 169, 0.301);
+            }
+
+            .menu li {
+                border:solid 1px rgba(169, 169, 169, 0.301);
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="header">
+
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Главная</li>
+                <li>О нас</li>
+                <li>Продукты</li>
+                <li>Контакты</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <h1>
+                What is Lorem Ipsum?
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolorem doloribus ut corrupti porro repellat reiciendis? Et at fuga dignissimos ea, ex modi, vel reiciendis optio distinctio voluptas, animi ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi, aut nam quasi rerum cumque recusandae fuga consequatur quibusdam. Consequuntur vitae, porro ratione reprehenderit dignissimos asperiores illo ipsum numquam exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum impedit sequi quidem, possimus reiciendis beatae nobis recusandae consectetur amet dolor? Animi, in blanditiis! Ab fugit alias optio tenetur quia!
+            </p>
+            <h1>
+                What is Lorem Ipsum?
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, dolorem doloribus ut corrupti porro repellat reiciendis? Et at fuga dignissimos ea, ex modi, vel reiciendis optio distinctio voluptas, animi ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est modi, aut nam quasi rerum cumque recusandae fuga consequatur quibusdam. Consequuntur vitae, porro ratione reprehenderit dignissimos asperiores illo ipsum numquam exercitationem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur illum impedit sequi quidem, possimus reiciendis beatae nobis recusandae consectetur amet dolor? Animi, in blanditiis! Ab fugit alias optio tenetur quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolorem voluptates voluptatibus cumque iste, molestias quaerat ad eveniet voluptatem? Error fugiat molestias reprehenderit tenetur ad sit dolor voluptas, totam corporis.
+            </p>
+        </div>
+        <div class="aside-one">
+            <p>Aside type 1</p>
+        </div>
+        <div class="aside-two">
+            <p>Aside type 2</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>
+            &copy;Сopyright 2017
+        </div>
+        <ul>
+            <li>Twitter</li>
+            <li>Vkontakte</li>
+            <li>Facebook</li>
+        </ul>
+    </div>
+</body>
+</html>
