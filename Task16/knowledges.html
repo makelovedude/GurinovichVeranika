@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Знания</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: whitesmoke
+        }
+
+        h3 {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            border-top: 2px dashed rgba(169, 169, 169, 0.253);
+            border-left: 2px solid rgba(169, 169, 169, 0.253);
+            border-right: 2px solid rgba(169, 169, 169, 0.253);
+            border-bottom: 2px solid rgba(169, 169, 169, 0.253);
+            box-shadow: 0px 3px 6px rgba(169, 169, 169, 0.253);
+        }
+
+        .line {
+            width: 890px;
+            height: 20px;
+            border: 2px solid  rgba(169, 169, 169, 0.253);
+            border-radius: 15px;
+            background:  rgba(169, 169, 169, 0.253);
+            margin-bottom: 20px;
+        }
+
+        .orange {
+            width: 600px;
+            height: 20px;
+            border-radius: 15px;
+            background-color: orange;
+            animation-name: for-orange;
+            animation-duration: 1s; 
+        }
+
+        @keyframes for-orange {
+            from, 15%  {width: 50px;}
+            25%, 44%  {width: 150px;} 
+            45%, 74%  {width: 400px;}
+            75%, 100% {width: 600px;}
+        }
+
+        .purple {
+            width: 500px;
+            height: 20px;
+            border-radius: 15px;
+            background-color: purple;
+            animation-name: for-purple;
+            animation-duration: 1s; 
+        }
+
+        @keyframes for-purple {
+            from, 15%  {width: 50px;}
+            25%, 44%  {width: 150px;} 
+            45%, 74%  {width: 400px;}
+            75%, 100% {width: 500px;}
+        }
+
+        .red {
+            width: 400px;
+            height: 20px;
+            border-radius: 15px;
+            background-color: red;
+            animation-name: for-red;
+            animation-duration: 1s; 
+        }
+
+        @keyframes for-red {
+            from, 15%  {width: 50px;}
+            25%, 44%  {width: 150px;} 
+            45%, 74%  {width: 300px;}
+            75%, 100% {width: 400px;}
+        }
+
+        .green {
+            width: 300px;
+            height: 20px;
+            border-radius: 15px;
+            background-color: green;
+            animation-name: for-green;
+            animation-duration: 1s; 
+        }
+
+        @keyframes for-green {
+            from, 15%  {width: 50px;}
+            25%, 44%  {width: 150px;} 
+            45%, 74%  {width: 200px;}
+            75%, 100% {width: 300px;}
+        }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+          <h3>Мои знания:</h3>
+          HTML
+          <div class="line">
+              <div class="orange"></div>
+          </div>
+          CSS
+          <div class="line">
+              <div class="purple"></div>
+          </div>
+          JavaScript
+          <div class="line">
+              <div class="red"></div>
+          </div>
+          jQuery
+          <div class="line">
+              <div class="green"></div>
+          </div>
+      </div>
+  </body>
+</html>
