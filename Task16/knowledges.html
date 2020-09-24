@@ -2,121 +2,146 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <title>Знания</title>
     <style>
-        body {
-            margin: 0;
-            background-color: whitesmoke
-        }
 
-        h3 {
-            margin-bottom: 30px;
-        }
+body {
+  background-color: #f8f9f8;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Times New Roman', Times, serif;
+}
+            
+@keyframes progress-html {
+  from {width: 0%;}
+  to {width: 75%;}
+}           
+      
+@keyframes progress-css {
+  from {width: 0%;}
+  to {width: 65%;}
+}
+    
+@keyframes progress-javascript {
+  from {width: 0%;}
+  to {width: 55%;}
+}    
+         
+@keyframes progress-jquery {
+  from {width: 0%;}
+  to {width: 45%;}
+}
 
-        .container {
-            width: 900px;
-            margin: 30px auto;
-            padding: 30px;
-            border-top: 2px dashed rgba(169, 169, 169, 0.253);
-            border-left: 2px solid rgba(169, 169, 169, 0.253);
-            border-right: 2px solid rgba(169, 169, 169, 0.253);
-            border-bottom: 2px solid rgba(169, 169, 169, 0.253);
-            box-shadow: 0px 3px 6px rgba(169, 169, 169, 0.253);
-        }
+h1 {
+  font-size: 20px;
+  font-weight: lighter;
+  margin-bottom: 40px;
+}
 
-        .line {
-            width: 890px;
-            height: 20px;
-            border: 2px solid  rgba(169, 169, 169, 0.253);
-            border-radius: 15px;
-            background:  rgba(169, 169, 169, 0.253);
-            margin-bottom: 20px;
-        }
+.container h1, div {
+    font-weight: bold;
+}
 
-        .orange {
-            width: 600px;
-            height: 20px;
-            border-radius: 15px;
-            background-color: orange;
-            animation-name: for-orange;
-            animation-duration: 1s; 
-        }
+.container {
+    width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-top: 2px dashed rgba(169, 169, 169, 0.253);
+    border-left: 2px solid rgba(169, 169, 169, 0.253);
+    border-right: 2px solid rgba(169, 169, 169, 0.253);
+    border-bottom: 2px solid rgba(169, 169, 169, 0.253);
+    box-shadow: 0px 3px 6px rgba(169, 169, 169, 0.253); 
+}
 
-        @keyframes for-orange {
-            from, 15%  {width: 50px;}
-            25%, 44%  {width: 150px;} 
-            45%, 74%  {width: 400px;}
-            75%, 100% {width: 600px;}
-        }
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: rgba(169, 169, 169, 0.418);
+  border-radius: 10px;
+  box-shadow: inset 1px 2px 3px darkgray;
+  padding: 1px;
+  margin-bottom: 20px;
+}
 
-        .purple {
-            width: 500px;
-            height: 20px;
-            border-radius: 15px;
-            background-color: purple;
-            animation-name: for-purple;
-            animation-duration: 1s; 
-        }
+.progress {
+  border-radius: 10px;
+  display: inline-block;
+  height: 100%;
+}
 
-        @keyframes for-purple {
-            from, 15%  {width: 50px;}
-            25%, 44%  {width: 150px;} 
-            45%, 74%  {width: 400px;}
-            75%, 100% {width: 500px;}
-        }
+.progress-html {
+  background-color: orange;
+  animation-name: progress-html;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s; /* задержка перед началом*/
+  animation-fill-mode: forwards; /* сохранит стили последнего ключевого кадра */
+}
 
-        .red {
-            width: 400px;
-            height: 20px;
-            border-radius: 15px;
-            background-color: red;
-            animation-name: for-red;
-            animation-duration: 1s; 
-        }
+.progress-css {
+  background-color: purple;
+  animation-name: progress-css;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s; 
+  animation-fill-mode: forwards; 
+}
 
-        @keyframes for-red {
-            from, 15%  {width: 50px;}
-            25%, 44%  {width: 150px;} 
-            45%, 74%  {width: 300px;}
-            75%, 100% {width: 400px;}
-        }
+.progress-javascript {
+  background-color: red;
+  animation-name: progress-javascript;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
 
-        .green {
-            width: 300px;
-            height: 20px;
-            border-radius: 15px;
-            background-color: green;
-            animation-name: for-green;
-            animation-duration: 1s; 
-        }
-
-        @keyframes for-green {
-            from, 15%  {width: 50px;}
-            25%, 44%  {width: 150px;} 
-            45%, 74%  {width: 200px;}
-            75%, 100% {width: 300px;}
-        }
-    </style>
-  </head>
-  <body>
-      <div class="container">
-          <h3>Мои знания:</h3>
-          HTML
-          <div class="line">
-              <div class="orange"></div>
-          </div>
-          CSS
-          <div class="line">
-              <div class="purple"></div>
-          </div>
-          JavaScript
-          <div class="line">
-              <div class="red"></div>
-          </div>
-          jQuery
-          <div class="line">
-              <div class="green"></div>
-          </div>
+.progress-jquery {
+  background-color: green;
+  animation-name: progress-jquery;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s; 
+  animation-fill-mode: forwards;
+}
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <h1>Мои знания:</h1>
+    
+    <div class="knowledge">
+        HTML
+      <div class="progress-bar">
+        <span class="progress progress-html"></span>
       </div>
-  </body>
+    </div>
+    
+    <div class="knowledge">
+        CSS
+      <div class="progress-bar">
+        <span class="progress progress-css"></span>
+      </div>
+    </div>
+    
+    <div class="knowledge">
+        JavaScript
+      <div class="progress-bar">
+        <span class="progress progress-javascript"></span>
+      </div>
+    </div>
+    
+    <div class="knowledge">
+        jQuery
+      <div class="progress-bar">
+        <span class="progress progress-jquery"></span>
+      </div>
+    </div>
+    
+  </div>
+</body>
 </html>
