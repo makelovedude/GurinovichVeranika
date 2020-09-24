@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Css chess</title>
   <style>
+
     body {
       margin: 0;
     }
@@ -14,30 +15,39 @@
       margin: 50px auto 0px;
     }
 
-    tr:first-child td,
-    tr:last-child td {
-      height: 24px;
-      background: rgb(179, 247, 184); 
+    .chess td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid gray;
     }
-
-    tr td:first-child,
-    tr td:last-child {
-      width: 24px;
-      background: rgb(179, 247, 184);  
-    }
-
-    td {
-      border: 1px solid gray; 
-      width: 48px;
-      height: 48px;
-    }
-
-    .black {
-      background: black;
-    }
-
     
+    tr:nth-child(odd) td:nth-child(even) {
+      background-color: black;
+    }
 
+    tr:nth-child(even) td:nth-child(odd) {
+      background-color: black;
+    }
+
+    .chess tr:first-child td {
+      background-color: #98FB98;
+      height: 25px;
+    }
+
+    .chess tr:last-child td {
+      background-color: #98FB98;
+      height: 25px;
+    }
+
+    .chess tr td:first-child {
+      background-color: #98FB98;
+      width: 25px;
+    }
+
+    .chess tr td:last-child {
+      background-color: #98FB98;
+      width: 25px;
+    }
     
 
   </style>
