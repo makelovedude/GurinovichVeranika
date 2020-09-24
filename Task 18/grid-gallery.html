@@ -6,80 +6,84 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>A PhotoGallery by Grid Layout</title>
     <style>
-        body {
-            margin: 0;
+       
+        h1 {
+           text-align: center;
         }
 
-        .container {
-            display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 5vw);
-    grid-gap: 15px;
-            
+        .photogallery {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+           grid-template-rows: repeat(5, 200px);
+           grid-gap: 3px;
+           grid-auto-flow: dense; /* размещение элементов ,dense -  указывает заполнять элементами свободное пространство сетки.*/
+           max-width: 1200px;
+           margin: auto;
         }
 
-       img {
-        width: 100%;
-    height: 100%;
-    object-fit: cover;
-       }
+        .big {
+           grid-column: span 2; 
+           grid-row: span 2;
+        }  
 
-  .horizontal {
-  grid-column: span 2;
-}
+        .horizontal {
+           grid-column: span 2;
+        }
 
-.vertical {
-  grid-row: span 2;
-}
+        .vertical {
+           grid-row: span 2;
+        }
 
-.big {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+        .container img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+        }
+
     </style>
 </head>
 <body>
-    <div class="photo">
+    <div class="container">
         <h1>A PhotoGallery by Grid Layout</h1>
-        <div class="container">
+        <div class="photogallery">
             <div class="big">
                 <img src="image/big1.jpg" alt="image-01">
             </div>
             <div class="horizontal">
-                <img src="image/gorizontal1.jpg" alt="image-02">
+                <img src="image/horizontal1.jpg" alt="image-02">
             </div>
             <div>
-                <img src="image/norm5.jpg" alt="image-03">
+                <img src="image/norm1.jpg" alt="image-03">
             </div>
             <div class="horizontal">
-                <img src="image/gorizontal2.jpg" alt="image-04">
+                <img src="image/horizaontal2.jpg" alt="image-04">
             </div>
             <div class="horizontal">
-                <img src="image/gorizaontal3.jpg" alt="image-05">
+                <img src="image/horizaontal3.jpg" alt="image-05">
             </div>
             <div class="vertical">
                 <img src="image/vertical1.jpg" alt="image-06">
             </div>
             <div>
-                <img src="image/vertical2.jpg" alt="image-07">
+                <img src="image/norm2.jpg" alt="image-07">
             </div>
             <div class="vertical">
-                <img src="image/vertical3.jpg" alt="image-08">
+                <img src="image/vertical2.jpg" alt="image-08">
             </div>
             <div class="big">
                 <img src="image/big2.jpg" alt="image-09">
             </div>
             <div>
-                <img src="image/norm1.jpg" alt="image-10">
+                <img src="image/norm3.jpg" alt="image-10">
             </div>
             <div class="vertical">
-                <img src="image/norm2.jpg" alt="image-11">
+                <img src="image/vertical3.jpg" alt="image-11">
             </div>
             <div>
-                <img src="image/norm3.jpg" alt="image-12">
+                <img src="image/norm4.jpg" alt="image-12">
             </div>
             <div>
-                <img src="image/norm4.jpg" alt="image-13">
+                <img src="image/norm5.jpg" alt="image-13">
             </div>
         </div>
     </div>
