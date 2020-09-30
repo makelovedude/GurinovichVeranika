@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interview</title>
+</head>
+<body>
+    <script>
+        var surname = prompt("Введите Вашу фамилию.");
+        var name = prompt("Введите Ваше имя.");
+        var patronymic = prompt("Введите Ваше отчество.");
+        var age = prompt("Введите Ваш возраст в годах");
+        var gender = confirm("Ваш пол - мужской?");
+
+        var age = parseInt(age);
+        var ageDays = age * 365;
+
+        if (gender) {
+            var userGender = " мужской ";
+        } else {
+            userGender = " женский ";
+        }
+
+        if (surname == undefined) {
+            surname = " неизвестно ";
+        }
+        if (name == undefined) {
+            name = " неизвестно ";
+        }
+        if (patronymic == undefined) {
+            patronymic = " неизвестно ";
+        }
+
+        var adult = "";
+        var pension = "";
+
+        if (age > 18 && age >= 60) {
+            adult = "Вы уже совершенолетний";
+            pension = " да ";
+        } else if (age >= 18 && age < 60) {
+            adult = "Вы уже совершенолетний";
+            pension = " нет ";
+        } else if (age < 18) {
+            adult = "Вы несовершенолетний";
+            pension = " нет ";
+        } else {
+            age = " неизвестно ";
+            ageDays = " неизвестно ";
+            pension = " неизвестно ";
+        }
+
+        var result = "Ваше ФИО: " + " " + surname+ " " + name + " " + patronymic + "\n" + "Ваш возраст в годах: " + 
+  age + "\n" + "Ваш возраст в днях:" + ageDays + "\n" + adult + "\n" + "Ваш пол:" + userGender + "\n" + "Вы на пенсии:" + pension;
+
+        alert(result);
+    </script>
+</body>
+</html>

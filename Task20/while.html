@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+        var a = 1;
+        var b = '|_';
+        while (a < 10) {
+            console.log (b);
+            b = b + '|_';
+            a++;
+        }
+
+        var c = '\u2B1C' + '\u2B1B';
+        var d= '\u2B1B' + '\u2B1C';
+
+        for(let i=1; i<4; i++)
+            c = c +('\u2B1C' + '\u2B1B');
+        for(let f=1; f<4; f++)
+            d = d +('\u2B1B' + '\u2B1C');
+
+        console.log (c + '\n' + d + '\n' + c + '\n' + d + '\n' + c + '\n' + d + '\n' + c + '\n' + d);
+    </script>
+</body>
+</html>

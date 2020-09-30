@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js numbers</title>
+</head>
+<body>
+    <script>
+        number1 = prompt("Введите первое число в числовом формате!");
+        number2 = prompt("Введите второе число в числовом формате!");
+  
+        number1 = parseFloat(number1);
+        number2 = parseFloat(number2);
+
+        console.log(isNaN(number1));
+        console.log(isNaN(number2));
+
+        if (number1 != parseFloat(number1) || number2 != parseFloat(number2)) {
+            prompt("Какое-то значение не является числом, введите их заново!")
+            number1 = prompt("Введите первое число в числовом формате!");
+            number2 = prompt("Введите второе число в числовом формате!");
+        }
+
+        var evenOdd1 = "";
+        var evenOdd2 = "";
+
+        if (number1 % 2 == 0) {
+            evenOdd1 = "четное, ";
+        } else {
+            evenOdd1 = "нечетное, ";
+        }
+        if (number2 % 2 == 0) {
+            evenOdd2 = "четное, ";
+        } else {
+            evenOdd2 = "нечетное, ";
+        }
+
+        var wholeFactional1 = "";
+        var wholeFactional2 = "";
+
+        if (Number.isInteger(number1)) {
+            wholeFactional1 = "целое, ";
+        } else {
+            wholeFactional1 ="дробное, ";
+        }
+        if (Number.isInteger(number2)) {
+            wholeFactional2 = "целое, ";
+        } else {
+            wholeFactional2 ="дробное, ";
+        }
+
+        var negativePositive1 = "";
+        var negativePositive2 = "";
+
+        if (number1 < 0) {
+            negativePositive1 = "отрицательное, ";
+        }  else {
+            negativePositive1 = "положительное, ";
+        }
+        if (number2 < 0) {
+            negativePositive2 = "отрицательное, ";
+        }  else {
+            negativePositive2 = "положительное, ";
+        }
+
+        var lessMore1 = "";
+        var lessMore2 = "";
+
+        if (number2 < number1) {
+            lessMore1 = "первое число больше, чем второе число.";
+            lessMore2 = "второе число меньше, чем первое число.";
+        } else if (number2 > number1) {
+            lessMore1 = "первое число меньше, чем второе число.";
+            lessMore2 = "второе число больше, чем первое число.";
+        } else if (number2 == number1) {
+            lessMore1 = "первое число равно второму числу.";
+            lessMore2 = "первое число равно второму числу.";
+        }
+
+        var result1 = "Первое число " + number1 + " : " + evenOdd1 + wholeFactional1 + negativePositive1 + lessMore1 + "\n";
+        var result2 = "Второе число " + number2 + " : " + evenOdd2 + wholeFactional2 + negativePositive2 + lessMore2 + "\n";
+
+        if (isNaN(number1) || isNaN(number2)) {
+            alert("Ошибка, одно из значений не является числом!");
+        }  else if (number1 == null && number2 == null) {
+            alert("Ошибка, вы не ввели числа!");
+        }  else if (number1 == "" && number2 == "") {
+            alert("Ошибка, вы не ввели числа!");
+        }  else {
+            alert(result1 + result2);
+        }
+        
+    </script>
+</body>
+</html>

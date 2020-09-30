@@ -1,0 +1,25 @@
+Кроссбраузерность:
+https://modernizr.com/
+https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
+https://github.com/scottjehl/Respond
+https://github.com/aFarkas/html5shiv
+http://selectivizr.com/
+
+Фреймворки:
+1) https://getbootstrap.com/
+2) https://tailwindcss.com/
+3) https://materializecss.com/
+4) https://bulma.io/
+5) https://get.foundation/
+
+SCSS and other:
+https://tproger.ru/translations/complete-sass-guide/
+https://webformyself.com/nachalo-raboty-s-postcss-v-2019/
+https://gist.github.com/neretin-trike/214fe69cf632fbd9db04d702b7f303c1 (?)
+
+Использование browsersync:
+https://htmlacademy.ru/blog/boost/backend/installing-nodejs
+https://nodejs.org/ru/
+https://learn.javascript.ru/screencast/nodejs
+https://learn.javascript.ru/screencast/gulp
+https://www.browsersync.io/
