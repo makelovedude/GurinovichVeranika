@@ -10,30 +10,39 @@
         }
         .button {
             color: #fff;
+            text-align: center;
             text-decoration: none;
-            background: rgb(20, 97, 212);
-            padding: 10px 50px;
+            background: rgb(37, 98, 168);
+            width: 200px;
+            padding: 10px 0px;
             display: block;
             margin: 15px auto;
-            border-radius: 10px 10px;
+            border-radius: 30px 30px;
+            border: 1px solid blue;
             outline: none;
         }
         .button:hover {
             background: rgb(76, 175, 232);
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
         }
         .button:active {
-            background: rgb(31, 20, 189);
+            background: rgb(37, 98, 168);
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9);
         }
     </style>
 </head>
 <body>
     <body>
 
-    <input type="button" class="button" onclick="car_in_array()" value="Создать массив"/>
+    <input type="button" class="button" onclick="create_an_array()" value="Создать массив"/>
      
-     <input type="button" class="button" onclick="car_in_array()" value="Удалить массив"/>
+     <input type="button" class="button" onclick="delete_an_array()" value="Удалить массив"/>
      
-     <input type="button" class="button" onclick="check_array()" value="Проверить в массиве"/>
+     <input type="button" class="button" onclick="check_an_array()" value="Проверить в массиве"/>
 
      <script src="script.js"></script>
 
