@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страны</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .button {
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            background: rgb(37, 98, 168);
+            width: 300px;
+            padding: 15px 0px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 30px 30px;
+            border: 1px solid blue;
+            outline: none;
+        }
+        .button:hover {
+            background: rgb(76, 175, 232);
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        .button:active {
+            background: rgb(37, 98, 168);
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <body>
+
+    <input type="button" class="button" onclick="buttonInput()" value="Ввод информации о стране"/>
+     
+     <input type="button" class="button" onclick="buttonReceiving()" value="Получение информации о стране"/>
+     
+     <input type="button" class="button" onclick="buttonScroll()" value="Перечень всех стран"/>
+
+     <input type="button" class="button" onclick="buttonDelete()" value="Удаление информации о стране"/>
+
+     <script src="/Task21/countries-script.js"></script>
+
+     <script>
+
+        function buttonInput(countryName, capitalName) {
+            countryName = prompt("Пожалуйста, введите название страны."), 
+            capitalName = prompt("Пожалуйста, введите название столицы."),
+            addСountry (countryName, capitalName);
+        }
+
+        function buttonReceiving(countryName, capitalName) {
+           countryName = prompt("Пожалуйста, введите название страны для проверки."),
+           console.log( getcountryInfo (countryName) );
+        }
+
+        function buttonScroll(countryName, capitalName) {
+           console.log ( listСountries() );
+        }
+
+        function buttonDelete(countryName, capitalName) {
+           countryName = prompt("Пожалуйста, введите название страны, которую нужно удалить."),
+           deleteСountry(countryName);
+           console.log ( listСountries() );
+        }
+
+     </script>
+
+   </body>
+
+</body>
+</html>
