@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+
+        .calculator {
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+            margin: 100px auto;
+            background-color: rgb(107, 180, 180);
+            border-radius: 30px;
+            padding: 15px;
+        }
+
+        .row {
+           margin: 10px 0;
+           display: flex;
+           justify-content: space-between;
+        }
+
+        .display {
+           width: 100%;
+           border: 1px solid black;
+           padding: 4px 2px;
+           background-color: white;
+        }
+
+        #display {
+           width: 100%;
+           border: none;
+           padding: 4px 2px;
+           text-align: right;
+           font-size: 15px;
+           line-height: 15px;
+           background-color: white;
+        }
+
+        .key, #result, #clear {
+           border: 1px solid black;
+           width: 40px;
+           height: 35px;
+           transition: all .3s;
+           background-color: white;
+        }
+
+        .key:hover, #result:hover, #clear:hover {
+           background-color: rgb(236, 91, 91);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="row display">
+            <button type="button" id="clear">C</button>
+            <input id="display" type="text" disabled />
+        </div>
+        <div class="row">
+            <button type="button" class="key">7</button>
+            <button type="button" class="key">8</button>
+            <button type="button" class="key">9</button>
+            <button type="button" class="key">/</button>
+        </div>
+        <div class="row">
+            <button type="button" class="key">4</button>
+            <button type="button" class="key">5</button>
+            <button type="button" class="key">6</button>
+            <button type="button" class="key">*</button>
+        </div>
+        <div class="row">
+            <button type="button" class="key">1</button>
+            <button type="button" class="key">2</button>
+            <button type="button" class="key">3</button>
+            <button type="button" class="key">-</button>
+        </div>
+        <div class="row">
+            <button type="button" class="key">0</button>
+            <button type="button" class="key">.</button>
+            <button type="button" id="result">=</button>
+            <button type="button" class="key">+</button>
+        </div>
+    </div>
+
+    <script src="/Task22/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document for testing javascript</title>
+
+  <style>
+    .title {
+      color: blue;
+    }
+
+    .text-red {
+      color: red;
+    }
+
+    .parent {
+      width: 500px;
+      height: 300px;
+      background-color: cyan;
+      border: 2px red solid;
+      position: relative;
+    }
+
+    .box-red {
+      position: absolute;
+      left: 175px;
+      top: 75px;
+      width: 150px;
+      height: 150px;
+      background-color: red;
+    }
+
+    .box-green {
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      width: 30px;
+      height: 30px;
+      background-color: green;
+    }
+
+    .shadow {
+      display: none;
+    }
+
+    .shadow-open {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 101;
+      background-color: rgba(0,0,0,.75);
+    }
+
+    .modal {
+      display: none;
+      background-color: #fff;
+      width: 300px;
+      border: 2px red solid;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 102;
+      transform: translate(-50%, -50%);
+    }
+
+    .modal header {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px red solid;
+      position: relative;
+    }
+
+    .modal h2 {
+      margin: 0;
+    }
+
+    .modal .close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: block;
+      text-decoration: none;
+      padding: 3px 5px;
+    }
+
+    .modal section {
+      padding: 20px 10px;
+      font-size: 18px;
+    }
+
+    .modal footer {
+      padding: 10px;
+      text-align: center;
+      border-top: 1px red solid;
+    }
+
+    .modal-open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="title">Hi there!</h1>
+
+  <button onclick="h1Change();">Меняю h1!</button>
+  <button onclick="bgChange();">Меняю фон, дешево!</button>
+  <button onclick="pChange();">Меняю содержимое</button>
+  <button onclick="createRandomDigit();">Random</button>
+
+  <ol id="list">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
+
+  <p>
+    <input id="inputNumber" type="text" value="15">
+    <button onclick="changeInput();">Изменить</button>
+  </p>
+
+  <p id="test-p">
+    <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Nisi nesciunt commodi iure magni illum aliquam minus nulla! Quia, omnis amet consectetur provident aperiam voluptatibus sit veritatis exercitationem, maxime, mollitia <i>laboriosam</i>!
+  </p>
+
+  <div class="parent">
+    <div id="red" class="box-red"></div>
+    <div id="green" class="box-green"></div>
+  </div>
+
+  <p><button onclick="toTop()">Сверху</button></p>
+  <p><button onclick="toRight()">Справа</button></p>
+  <p><button onclick="toBottom()">Снизу</button></p>
+  <p><button onclick="toLeft()">Слева</button></p>
+
+  <p>
+    <a href="javascript:openModalWindow();" id="open-modal">Открыть модальное окно</a>
+  </p>
+
+  <div class="shadow" id="shadow"></div>
+  <div class="modal" id="modal">
+    <header>
+      <a href="javascript:closeModalWindow();" class="close">X</a>
+      <h2>Я модалка</h2>
+    </header>
+    <section>
+      Я текст модалки
+    </section>
+    <footer>
+      а я подвал
+    </footer>
+  </div>
+
+  <script>
+
+    function toLeft() {
+      boxSizes("red");
+      boxSizes("green");
+
+      var redBox = document.getElementById("red");
+      var greenBox = document.getElementById("green");
+
+      greenBox.style.left = redBox.offsetLeft - greenBox.offsetWidth + "px";
+      greenBox.style.top = redBox.offsetTop + redBox.offsetHeight/2 - greenBox.offsetHeight/2 + "px";
+    }
+
+    function boxSizes(id) {
+      var box = document.getElementById(id);
+      console.log("Info about " + id + ":");
+      console.log("width", box.offsetWidth);
+      console.log("height", box.offsetHeight);
+      console.log("position top", box.offsetTop);
+      console.log("position left", box.offsetLeft);
+    }
+
+    var list = document.getElementById("list");
+
+    let pBeforeOl = document.createElement("p");
+    pBeforeOl.innerHTML = "before ol";
+    list.before(pBeforeOl); // вставить абзац "before" перед <ol>
+    let pAfterOl = document.createElement("p");
+    pAfterOl.innerHTML = "after ol";
+    list.after(pAfterOl); // вставить абзац "after" после <ol>
+
+    let liFirst = document.createElement('li');
+    liFirst.innerHTML = 'prepend';
+    list.prepend(liFirst); // вставить liFirst в начало <ol>
+
+    let liLast = document.createElement('li');
+    liLast.innerHTML = 'append';
+    list.append(liLast); // вставить liLast в конец <ol>
+
+    function changeInput() {
+      var inputNumber = document.getElementById("inputNumber");
+      console.log(inputNumber.value);
+      inputNumber.value++;
+    }
+
+    function isDigitInteger(digit) {
+      if ((digit % 1) === 0) {
+        return true;
+      }
+
+      return false;
+    }
+
+    console.log(isDigitInteger(10));  //true
+    console.log(isDigitInteger(0.5)); //false
+    console.log(isDigitInteger(1.25));//false
+    console.log(isDigitInteger(2));   //true
+
+    function h1Change() {
+      var h1 = document.querySelector("h1");
+      var classes = h1.className;
+      classes += " text-red";
+      h1.className = classes;
+    }
+
+    function bgChange() {
+      const body = document.body;
+      var currentBodyColor = body.style.backgroundColor;
+
+      console.log(currentBodyColor);
+
+      if (!currentBodyColor) {
+          body.style.backgroundColor = "red";
+      } else if (currentBodyColor === "red") {
+          body.style.backgroundColor = "green";
+      } else if (currentBodyColor === "green") {
+          body.style.backgroundColor = "blue";
+      } else if (currentBodyColor === "blue") {
+          body.style.backgroundColor = "";
+      }
+    }
+
+    function pChange() {
+      var p = document.getElementById("test-p");
+
+      console.log(p.innerHTML);
+      console.log(p.innerText);
+
+      p.innerHTML = "<img src=\"https://www.dw.com/image/16792432_401.jpg\" alt=\"smile\">";
+    }
+
+    function createRandomDigit() {
+      var n = 1;
+      var m = 100;
+      var result = Math.floor(Math.random()*(m-n+1))+n;
+
+      console.log(result);
+    }
+
+    var str = "Привет, я строка!";
+    console.log(str.split("").reverse().join(""));
+
+    function openModalWindow() {
+      var shadow = document.getElementById("shadow");
+      var modal = document.getElementById("modal");
+      shadow.classList.add("shadow-open");
+      modal.classList.add("modal-open");
+    }
+
+    function closeModalWindow() {
+      var shadow = document.getElementById("shadow");
+      var modal = document.getElementById("modal");
+      shadow.classList.remove("shadow-open");
+      modal.classList.remove("modal-open");
+    }
+
+
+  </script>
+
+
+</body>
+</html>

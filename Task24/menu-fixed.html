@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Фиксированное меню для сайта</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+<style>
+    body {
+        margin: 0;
+        height: 3000px;
+        background: linear-gradient(-45deg, #CFCFCF, #555);
+    }
+    .header {
+        height: 40px;
+        background-color: yellow;
+        padding-top: 160px;
+        position: relative;
+        z-index: 101;
+    }
+    .navigation {
+        background: #EF0505;
+        height: 40px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+        font-size: 16px;
+        line-height: 40px;
+        overflow: hidden;
+    }
+
+    @media (max-width: 1120px) {
+        .header {
+            padding-top: 200px;
+        }
+    }
+
+    .navigation-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        background: blue;
+    }
+
+    .navigation ul {
+        width: 1180px;
+        padding-left: 0;
+        margin: 0 auto;
+        display: block;
+    }
+    .navigation__menu li{
+        float: left;
+        list-style: none;
+        padding: 0 25px;
+        border-right: 1px solid #D60000;
+    }
+    .navigation__menu a {
+        color: #fff;
+        text-decoration: none;
+        font-family: Verdana;
+    }
+    .navigation__menu>li a:hover{
+        color: #656565;
+        transition: color 0.5s ease;
+    }
+
+    .to-top {
+        display: none;
+        padding: 15px;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 15px;
+        background: #fff;
+        border: 1px gray solid;
+        color: #000;
+        text-decoration: none;
+        opacity: .7;
+    }
+
+    .to-top:hover {
+        background: white;
+        opacity: 1;
+    }
+
+    .my-super-puper-slider {
+        width: 100%;
+    }
+
+    .my-slide {
+        height: 150px;
+        font-size: 54px;
+        color: #fff;
+        text-align: center;
+        padding-top: 30px;
+    }
+    
+    .my-slide-01 {background-color: red;}
+    .my-slide-02 {background-color: yellow;}
+    .my-slide-03 {background-color: cyan;}
+
+    .my-super-puper-slider .slick-prev {
+        left: 50px;
+        z-index: 101;
+    }
+    
+    .my-super-puper-slider .slick-next {
+        right: 50px;
+        z-index: 101;
+    }
+
+    .my-super-puper-slider .slick-next:before,
+    .my-super-puper-slider .slick-prev:before {
+        color: black;
+        font-size: 42px;
+    }
+
+    .my-super-puper-slider .slick-dots button {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 3px;
+        color: black;
+        background: cyan;
+        border-radius: 50%;
+    }
+
+    .my-super-puper-slider .slick-dots button:before {
+        content: "";
+    }
+    .my-super-puper-slider .slick-dots .slick-active button {
+        background: red;
+        color: white;
+    }
+
+</style>
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul class="navigation__menu">
+                <li><a href="#">Сумки</a></li>
+                <li><a href="#">Обувь</a></li>
+                <li><a href="#">Шарфы</a></li>
+                <li><a href="#">Одежда</a></li>
+                <li><a href="#">Аксессуары</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="my-super-puper-slider">
+      <div class="my-slide my-slide-01">your <a href="http://tut.by">Подробнее</a></div>
+      <div class="my-slide my-slide-02">your content slide 2</div>
+      <div class="my-slide my-slide-03">your content slide 3</div>
+    </div>
+
+    <a href="#" class="to-top">Наверх</a>
+
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    jQuery(function($) {
+
+        console.log("jQuery start");
+
+        var navMenu = $('.navigation'); // выбираем меню
+        var navMenuTop = navMenu.offset().top; //получение знaчения св-ва top
+        var toTop   = $('.to-top'); // выбираем кнопку to-top
+        var body    = $('html, body');
+
+        $(window).resize(function() {
+            // получаем св-во top каждый раз при изменения размеров окна браузера
+            navMenuTop = navMenu.offset().top;
+        });
+
+        $(window).scroll(function(){
+            var winScrollTopValue = $(window).scrollTop(); // насколько проскроллили страницу
+
+            //console.log(winScrollTopValue);
+
+            if (winScrollTopValue > navMenuTop) {
+                navMenu.addClass('navigation-fixed');
+            } else {
+                navMenu.removeClass('navigation-fixed');
+            }
+            
+            if (winScrollTopValue > 1000) {
+                toTop.fadeIn(800); // можно использовать .show();
+            } else if (winScrollTopValue < 1000) {
+                toTop.hide(); // можно использовать .fadeOut();
+            }
+        });
+
+        toTop.on('click', toTopClicked);
+
+        function toTopClicked(event) {
+            event.preventDefault(); //отменить действие по умолчанию
+            toTop.toggleClass("test");
+            body.animate(
+                {scrollTop: 0},
+                1200
+            );
+        }
+
+        //подключение слайдера
+        $('.my-super-puper-slider').slick({
+            autoplay: 5000,
+            dots: true,
+            slidesToShow: 2,
+        });
+    });
+</script>
+</body>
+</html>

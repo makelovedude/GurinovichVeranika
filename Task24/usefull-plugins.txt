@@ -1,0 +1,31 @@
+Слайдеры или карусели:
+1) http://kenwheeler.github.io/slick/
+2) https://owlcarousel2.github.io/OwlCarousel2/
+3) https://sorgalla.com/jcarousel/
+4) https://wowslider.com/
+
+Фотогалереи:
+1) http://fancyapps.com/fancybox/3/
+2) http://lokeshdhakar.com/projects/lightbox2/
+3) http://osvaldas.info/examples/image-lightbox-responsive-touch-friendly/
+4) http://cornel.bopp-art.com/lightcase/
+5) http://fotorama.io/ - сложная, но очень классная в использовании
+
+Модальные окна:
+1) https://arcticlab.ru/arcticmodal/
+2) https://paulund.co.uk/playground/demo/jquery_modal_box/
+3) https://zurb.com/playground/reveal-modal-plugin
+
+Про параллаксы:
+1) https://habr.com/post/141687/
+2) http://stephen.band/jparallax/
+3) http://johnpolacek.github.io/scrollorama/
+
+Эффекты при скроллировании:
+1) https://wowjs.uk/
+2) https://scrollrevealjs.org/
+3) http://scrollmagic.io/
+4) http://www.jasonlusk.com/scroll/
+
+Генератор фоновыъ изображений на SVG:
+https://bgjar.com/
